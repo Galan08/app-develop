@@ -1,4 +1,5 @@
 function users() {
+    document.getElementById('cardHeader').innerHTML = '<h5> Listado de usuarios </h5>'
     const REQRES_ENDPOINT = 'https://reqres.in/api/users?page=1'
     fetch(REQRES_ENDPOINT, {
         method: 'GET',
@@ -29,7 +30,7 @@ function users() {
                     <th scope="col">Apellido</th>
                     <th scope="col">Avatar</th>
                     </tr>
-                </thead>
+                </thead>s
             <tbody>
             `;
             result.info.data.forEach(element => {
@@ -55,7 +56,7 @@ function users() {
 }
 
 function products() {
-    document.getElementById('info').innerHTML = '<h1> Lista de productos </h1>'
+    document.getElementById('cardHeader').innerHTML = '<h5> Listado de productos </h5>'
 
     const REQRES_ENDPOINT = 'https://reqres.in/api/products?page=1'
     fetch(REQRES_ENDPOINT, {
