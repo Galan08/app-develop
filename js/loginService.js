@@ -25,7 +25,7 @@ function login(email, password) {
                 localStorage.setItem('token', "qwerty")
                 setTimeout(() => {
                     location.href = 'admin/dashboard.html'
-                }, 2000 )
+                }, 2000)
             }
             else {
                 alerttype = 'danger'
