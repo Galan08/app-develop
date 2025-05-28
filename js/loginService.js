@@ -22,7 +22,9 @@ function login(email, password) {
                 alerttype = 'success'
                 message = 'Inicio de sesión exitoso'
                 alertBuilder(alerttype, message)
-                localStorage.setItem('token', "qwerty")
+                response.json().then((data) =>(
+                localStorage.setItem('token', data.token)
+                ))
                 setTimeout(() => {
                     location.href = 'admin/dashboard.html'
                 }, 2000)
